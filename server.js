@@ -64,6 +64,15 @@ app.get('/bad', (req, res) =>{
   });
 });
 
+app.get('/projects', (req, res) =>{
+  res.render('projects.hbs',{
+    pageTitle: 'My Projects',
+    list: ['TranceHealer','VirtualRescue','Open3DScanner', 'TimeMachine']
+  });
+});
+
+
+
 app.listen(port, () => {
   console.log(`Server is up and running in port ${port}`);
 });
